@@ -1,2 +1,4 @@
-FLASK_APP=url_shortner
-FLASK_ENV=development
+
+FLASK_APP = url_shortner
+
+FLASK_ENV = development
