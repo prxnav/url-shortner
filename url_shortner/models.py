@@ -13,7 +13,7 @@ class Link(db.Model):
     date_created = db.Column(db.DateTime, default=datetime.now())
 
     def __init__(self, **kwargs):
-        super().__init__(**kwargs)  # check init classes creation
+        super().__init__(**kwargs)  ###
         self.short_url = self.generate_short_link
 
     def generate_short_link(self):
