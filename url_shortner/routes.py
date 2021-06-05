@@ -1,6 +1,6 @@
-from flask import Blueprint, render_template, request, Link
-from .extensions import db
-
+from flask import Blueprint, render_template, request
+from extensions import db
+from models import Link
 
 short = Blueprint("short", __name__)
 

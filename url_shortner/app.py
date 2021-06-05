@@ -3,7 +3,7 @@ from flask import Flask
 try:
     from extensions import db
     from routes import short
-except ImportError:
+except ImportError as e:
     from .extensions import db
     from .routes import short
 

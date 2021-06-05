@@ -1,5 +1,5 @@
 from flask_sqlalchemy import model
-from .extensions import db
+from extensions import db
 from datetime import datetime
 import string
 from random import choices
@@ -14,11 +14,11 @@ class Link(db.Model):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)  ###
-        self.short_url = self.generate_short_link
+        self.short_url = self.generate_short_link()
 
     def generate_short_link(self):
         characters = string.digits + string.ascii_letters
-        short_url = "".join(characters, k=5)
+        short_url = "".join(choices(characters, k=5))
 
         link = self.query.filter_by(short_url=short_url).first()
 
